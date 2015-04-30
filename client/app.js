@@ -57,7 +57,7 @@ app.factory("AuthSvc", function($window, $q, $http){
     if(!$window.sessionStorage.getItem("token"))
       return;
     var dfd = $q.defer();
-    $http.get("/api/session/" + $window.sessionStorage.getItem("token")).then(
+    $http.get("/api/sessions/" + $window.sessionStorage.getItem("token")).then(
       function(result){
         _user.username = result.data.username;
          dfd.resolve(result.data); 

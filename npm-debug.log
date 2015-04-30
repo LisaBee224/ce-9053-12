@@ -9,13 +9,13 @@
 6 info start workspace@1.0.0
 7 verbose unsafe-perm in lifecycle true
 8 info workspace@1.0.0 Failed to exec start script
-9 error workspace@1.0.0 start: `node server.js`
-9 error Exit status 8
+9 error workspace@1.0.0 start: `CONN=mongodb://localhost/my_world nodemon server.js`
+9 error Exit status 127
 10 error Failed at the workspace@1.0.0 start script.
 10 error This is most likely a problem with the workspace package,
 10 error not with npm itself.
 10 error Tell the author that this fails on your system:
-10 error     node server.js
+10 error     CONN=mongodb://localhost/my_world nodemon server.js
 10 error You can get their info via:
 10 error     npm owner ls workspace
 10 error There is likely additional logging output above.

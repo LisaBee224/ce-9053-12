@@ -2,6 +2,7 @@ angular.module("myWorld").controller("PeopleCtrl", function($scope, $location, N
   NavSvc.setTab("People");
   $scope.message = "I am the people control";
   $scope.user = PeopleSvc.user;
+  $scope.loggedin = $scope.user.authenticated();
   $scope.delete = function(person){
     PeopleSvc.deletePerson(person).then(
       function(){
@@ -35,6 +36,7 @@ angular.module("myWorld").controller("PeopleCtrl", function($scope, $location, N
       active: false
     };
     PeopleSvc.getPeople().then(function(people){
+      console.log('people', people);
       $scope.people = people;
     });
   }

@@ -34,9 +34,9 @@
           {{ person.color }}
         </div>
       </div>
-      <div class="col-md-3 text-right">
+      <div class="col-md-3 text-right" ng-if="loggedin">
         <button ng-click="edit(person)" class="btn btn-primary">Edit</button>
-        <button ng-click="delete(person)" class="btn btn-danger">Delete</button>
+        <button ng-click="delete(person)" ng-disabled="person.active" class="btn btn-danger">Delete</button>
       </div>
     </div>
   </li>

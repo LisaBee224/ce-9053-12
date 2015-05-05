@@ -13,11 +13,12 @@ html
     script(src="/people/people.js")
     script(src="/people/people.service.js")
     script(src="/people/people.ctrl.js")
-    script(src="/things.js")
+    script(src="/things/things.js")
+    script(src="/things/things.service.js")
   body(ng-app="myWorld")
     my-world-nav(show-login-button="true")
-        
+
     .container(style="padding: 10px 0")
       .div(ng-view)
-      
+
     my-world-nav

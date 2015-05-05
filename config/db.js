@@ -5,6 +5,7 @@ module.exports = {
 };
 
 function connect(conn, cb){
+    console.log('conn', conn);
     mongoose.connect(conn);
     mongoose.connection.once("open", function(){
         cb();
